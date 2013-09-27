@@ -1,0 +1,12 @@
+<h1>Welcome to URDB</h1>
+<h3>Check out some cool videos below</h3>
+
+<ul>
+	<% @movies.each do |movie| %>
+	<li><%= link_to movie.title, movie_path(movie.id)  %>
+		<ul>
+			<li><%= movie.description %></li>
+		</ul> 
+	</li>
+	<% end %>
+</ul>
