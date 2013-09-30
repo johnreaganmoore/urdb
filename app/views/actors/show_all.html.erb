@@ -1,0 +1,33 @@
+<div class="container-fluid" >
+	<div class="hero-unit">
+		<div class="welcome">
+			<h1>Welcome to URDB</h1>
+			<h3>Check out some movies and actors below</h3>
+		</div>
+	</div>
+
+<h1>Actors</h1>
+<% @actors.each do |actor| %>
+	<div class="row-fluid">
+		<div class="span3 movies"><button><%= link_to actor.name, actor_path(actor.id)  %></button>
+			<ul> Movies
+				<% actor.movies.each do |movie| %>
+				<li><%= movie.title %></li>
+				<% end %>
+			</ul> 
+		</div>
+	</div>
+<% end %>
+
+<h1>Movies</h1>
+<% @movies.each do |movie| %>
+	<div class="row-fluid">
+		<div class="span3 movies"><button><%= link_to movie.title, movie_path(movie.id)  %></button>
+			<ul>
+				<li><%= movie.description %></li>
+			</ul> 
+		</div>
+	</div>
+<% end %>
+
+</div >

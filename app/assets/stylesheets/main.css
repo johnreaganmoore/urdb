@@ -1,0 +1,26 @@
+
+.hero-unit {
+	text-align: center;
+	height: 500px;
+	background-color: #f6f6f6;
+}
+
+.movies {
+	text-align: center;
+	height: 300px;
+	float: left;
+}
+
+.container-fluid {
+	padding: 0px;
+}
+
+.welcome {
+	padding: 150px;
+	font-size: 1.6em;
+}
+
+.section-title {
+	text-align: center;
+}
+

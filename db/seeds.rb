@@ -19,3 +19,9 @@ movies = Movie.create([
   {title: "Fight Club", trailer: "SUXWAEX2jlg", gif: "http://1.bp.blogspot.com/-2n9gnIdOSKU/TgPBED_aDWI/AAAAAAAADgo/cIMMlFU4lyQ/s1600/fight-club-tumblr-5.gif", description: "An insomniac office worker looking for a way to change his life crosses paths with a devil-may-care soap maker and they form an underground fight club that evolves into something much, much more..." }
 
 ])
+
+actors = Actor.create([
+  {name: "Morgan Freeman"},
+  {name: "Christian Bale"},
+  {name: "Brad Pitt"}
+])

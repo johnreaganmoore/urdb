@@ -6,6 +6,15 @@
 
 <p><%= @movie.description %></p>
 
+<% if @movie.actors %>
+<h3>Cast</h3>
+	<% @movie.actors.each do |actor| %>
+<ul>
+	<li><%= actor.name %></li>
+</ul>
+	<% end %>
+<% end %>
+		
 <p>And google's favorite gif:</p>
 
 <img src="<%= @movie.gif %>">

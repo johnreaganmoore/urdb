@@ -1,12 +1,36 @@
-<h1>Welcome to URDB</h1>
-<h3>Check out some cool videos below</h3>
+<div class="container-fluid" >
+	<div class="hero-unit">
+		<div class="welcome">
+			<h1>Welcome to URDB</h1>
+			<h3>Check out some movies and actors below</h3>
+		</div>
+	</div>
 
-<ul>
+<h1 class="section-title">Movies</h1>
+	<div class="row">
 	<% @movies.each do |movie| %>
-	<li><button><%= link_to movie.title, movie_path(movie.id)  %></button>
-		<ul>
-			<li><%= movie.description %></li>
-		</ul> 
-	</li>
+			<div class="large-3 columns movies">
+
+			<h4><%= link_to movie.title, movie_path(movie.id)  %></h4>
+				<%= truncate(movie.description, length: 100, separator: ' ') %>
+
+			</div>
 	<% end %>
-</ul>
+	</div>
+
+
+<h1 class="section-title">Actors</h1>
+<div class="row">
+<% @actors.each do |actor| %>
+			<div class="large-3 columns movies"><h4><%= link_to actor.name, actor_path(actor.id)  %></h4>
+				<ul> Movies
+					<% actor.movies.each do |movie| %>
+					<li><%= movie.title %></li>
+					<% end %>
+				</ul> 
+			</div>
+	<% end %>
+</div>
+
+</div >
+
